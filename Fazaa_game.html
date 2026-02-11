@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Recall It!!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Hubungkan CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Halaman Awal -->
+  <div id="start-screen" class="screen">
+    <h1>Memory Match</h1>
+    <p>Masukkan nama kamu untuk memulai petualangan.</p>
+    <input type="text" id="player-name" placeholder="Nama Anda..." required />
+    <br><br>
+    <button onclick="startGame()">Mulai Bermain</button>
+  </div>
+
+  <!-- Halaman Game -->
+  <div id="game-screen" class="screen">
+    <h1>Memory Match</h1>
+    <div>Total Langkah: <span id="step-count">0</span></div>
+    <div class="game-board" id="board"></div>
+  </div>
+
+  <!-- Halaman Penghargaan -->
+  <div id="win-screen" class="screen">
+    <h1>Selamat!</h1>
+    <div class="certificate">
+      <h2>Penghargaan Kepada</h2>
+      <h3 id="winner-name">[Nama Pemain]</h3>
+      <p>Kamu telah menyelesaikan permainan.</p>
+      <p>Total Langkah: <strong id="final-steps">0</strong></p>
+    </div>
+    <button onclick="resetGame()">Main Lagi</button>
+  </div>
+
+  <!-- Hubungkan JS -->
+  <script src="script.js"></script>
+</body>
+</html>

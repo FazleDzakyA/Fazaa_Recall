@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #e0f7fa, #fce4ec, #bbdefb);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.screen {
+  display: none;
+  text-align: center;
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 10px 30px rgba(255, 105, 180, 0.15);
+  border: 1px solid rgba(173, 216, 230, 0.4);
+  max-width: 500px;
+  width: 90%;
+}
+
+#start-screen {
+  display: block;
+}
+
+h1 {
+  color: #0288d1;
+  font-weight: 600;
+  font-size: 1.8em;
+  letter-spacing: 1px;
+  text-shadow: 0 0 5px rgba(2, 136, 209, 0.2);
+}
+
+p {
+  color: #6a6a6a;
+  font-size: 1em;
+}
+
+input[type="text"] {
+  padding: 12px;
+  font-size: 1em;
+  background: #f0f8ff;
+  border: 1px solid #b3e5fc;
+  border-radius: 10px;
+  color: #333;
+  width: 100%;
+  max-width: 300px;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border: 1px solid #ff80ab;
+  box-shadow: 0 0 8px rgba(255, 128, 171, 0.4);
+}
+
+button {
+  padding: 12px 30px;
+  font-size: 1em;
+  background: linear-gradient(to right, #0288d1, #ff80ab);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(2, 136, 209, 0.4);
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+@media (max-width: 500px) {
+  .game-board {
+    gap: 8px;
+  }
+
+  .card {
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 1.6em;
+  }
+
+  button {
+    font-size: 1em;
+  }
+
+  .screen {
+    padding: 15px;
+  }
+}
+
+.card {
+  width: 80px;
+  height: 80px;
+  background: #e1f5fe;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 24px;
+  color: #0288d1;
+  transition: all 0.3s ease;
+  border: 1px solid #b3e5fc;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: #b3e5fc;
+  box-shadow: 0 0 10px rgba(2, 136, 209, 0.3);
+}
+
+.flipped {
+  background: #fff;
+  color: #ff4081;
+  font-weight: bold;
+  border: 1px solid #ff80ab;
+}
+
+.matched {
+  background: #fce4ec;
+  color: #ff4081;
+  cursor: default;
+  border: 1px solid #f8bbd0;
+}
+
+#step-count {
+  font-size: 1.1em;
+  color: #0288d1;
+  font-weight: 600;
+}
+
+.certificate {
+  background: #f0f9ff;
+  padding: 15px;
+  border: 2px dashed #0288d1;
+  border-radius: 15px;
+  margin: 20px auto;
+  max-width: 400px;
+  box-shadow: 0 0 10px rgba(255, 128, 171, 0.2);
+}
+
+.certificate h2 {
+  color: #0288d1;
+  font-size: 1.3em;
+}
+
+.certificate h3 {
+  color: #ff4081;
+  font-size: 1.6em;
+  margin: 10px 0;
+}
+
+.certificate p {
+  color: #6a6a6a;
+  font-size: 0.95em;
+}
